@@ -4,3 +4,4 @@ pics
 saved_models
 *.pyc
 web service*
+*ipynb_checkpoints*
