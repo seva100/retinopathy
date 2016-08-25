@@ -1,0 +1,19 @@
+ @comment{ Zheng Y, He M, Congdon N. The worldwide epidemic of diabetic 
+           retinopathy. Indian Journal of Ophthalmology. 2012;60(5):428-431. 
+           doi:10.4103/0301-4738.100542. }
+@book{medical_zheng,
+ author = "Zheng Y and He M and Congdon N.",
+ title = "The worldwide epidemic of diabetic retinopathy",
+ publisher = "Indian Journal of Ophthalmology",
+ address = "doi",
+ publisher = "10. 4103/0301-4738.100542",
+ year = 2012
+}
+
+@article{medical_dr,
+author={МИЛЕНЬКАЯ, ТМ and БЕССМЕРТНАЯ, ЕГ and АЛЕКСАНДРОВА, ВК and СМИРНОВА, НБ and АНДРИАНОВА, ТА},
+title={Диабетическая ретинопатия},
+journal={Сахарный диабет},
+year={2005},
+volume={3},
+}

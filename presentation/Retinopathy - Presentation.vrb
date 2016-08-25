@@ -1,0 +1,39 @@
+\frametitle{Сегментация кровеносных сосудов}
+	\vspace*{-0.3cm}
+	\begin{columns}[c]
+		\column{.7\textwidth}
+		\begin{enumerate}
+			\setcounter{enumi}{0}
+			\item Предобработка и усиление контраста
+			\begin{itemize}
+				\item Из цветного изображения извлекается канал I разложения HSI:
+				$$ I = \frac{R + G + B}{3} $$
+
+				\item CLAHE
+				\item Медианная фильтрация; результат медианной фильтрации вычитается из изображения
+				\item Инвертирование изображения (фильтр Габора должен реагировать на сосуды, имеющие высокую интенсивность, а не низкую)
+			\end{itemize}
+		\end{enumerate}
+		\column{.3\textwidth}
+			\begin{figure}
+			%\centering
+			\includegraphics[width=1.0\linewidth]{pics/vessels/1}
+			%\caption{}
+			\label{fig:1}
+			\end{figure}
+			\vspace*{-1.5cm}
+			\begin{figure}
+			%\centering
+			\includegraphics[width=1.0\linewidth]{pics/vessels/2}
+			%\caption{}
+			\label{fig:2}
+			\end{figure}
+			\vspace*{-1.5cm}
+			\begin{figure}
+			%\centering
+			\includegraphics[width=1.0\linewidth]{pics/vessels/3}
+			%\caption{}
+			\label{fig:3}
+			\end{figure}
+
+	\end{columns}

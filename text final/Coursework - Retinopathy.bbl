@@ -1,0 +1,658 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global}
+    \entry{medical_zheng}{article}{}
+      \name{author}{3}{}{%
+        {{hash=3b1ea91b2142f3096607c93890ec7ad8}{%
+           family={Y},
+           family_i={Y\bibinitperiod},
+           given={Zheng},
+           given_i={Z\bibinitperiod}}}%
+        {{hash=b31c5ccc44994c5288271ba93224fc76}{%
+           family={M},
+           family_i={M\bibinitperiod},
+           given={He},
+           given_i={H\bibinitperiod}}}%
+        {{hash=04751ccfc5616db9799f3029fe6a21dc}{%
+           family={N.},
+           family_i={N\bibinitperiod},
+           given={Congdon},
+           given_i={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{5317c890abc44f2862a003ea3af8478f}
+      \strng{fullhash}{5317c890abc44f2862a003ea3af8478f}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Indian Journal of Ophthalmology}
+      \field{title}{The worldwide epidemic of diabetic retinopathy}
+      \field{year}{2012}
+      \verb{doi}
+      \verb 10.4103/0301-4738.100542
+      \endverb
+    \endentry
+    \entry{medical_dr}{article}{}
+      \name{author}{5}{}{%
+        {{hash=ab4be3c2d476b5951478563aed233461}{%
+           family={Миленькая},
+           family_i={М\bibinitperiod},
+           given={Т.М.},
+           given_i={Т\bibinitperiod}}}%
+        {{hash=5544d8db6645d898bbe40c8ed0631226}{%
+           family={Бессмертная},
+           family_i={Б\bibinitperiod},
+           given={Е.Г.},
+           given_i={Е\bibinitperiod}}}%
+        {{hash=743747e085e7d84a6336196dca2b179d}{%
+           family={Александрова},
+           family_i={А\bibinitperiod},
+           given={В.К.},
+           given_i={В\bibinitperiod}}}%
+        {{hash=4d124d393170eba1672238f1ebd81555}{%
+           family={Смирнова},
+           family_i={С\bibinitperiod},
+           given={Н.Б.},
+           given_i={Н\bibinitperiod}}}%
+        {{hash=5fb943566fc46d0895edbedd925de53a}{%
+           family={Андрианова},
+           family_i={А\bibinitperiod},
+           given={Т.А.},
+           given_i={Т\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8012d23a36e44f0354d4513f4acdad5}
+      \strng{fullhash}{d48c785498882969280ce40c40aa1fc4}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Сахарный диабет}
+      \field{title}{Диабетическая ретинопатия}
+      \field{volume}{3}
+      \field{year}{2005}
+    \endentry
+    \entry{kaggle}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a9305bed86b73d012b0093d01238ce7c}{%
+           family={Kaggle.com},
+           family_i={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{a9305bed86b73d012b0093d01238ce7c}
+      \strng{fullhash}{a9305bed86b73d012b0093d01238ce7c}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Соревнование Diabetic Retinopathy Detection}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://www.kaggle.com/c/diabetic-retinopathy-detection/
+      \endverb
+    \endentry
+    \entry{book_opthalmology}{book}{}
+      \name{author}{3}{}{%
+        {{hash=3b582a13e4ea28b7b638569519cbcbd5}{%
+           family={Oloumi},
+           family_i={O\bibinitperiod},
+           given={F.},
+           given_i={F\bibinitperiod}}}%
+        {{hash=a0d4b0aac30a8929b58f669ef5e78b05}{%
+           family={Rangayyan},
+           family_i={R\bibinitperiod},
+           given={R.M.},
+           given_i={R\bibinitperiod}}}%
+        {{hash=6c40a7994487d09c0faffb5712d6087a}{%
+           family={Ells},
+           family_i={E\bibinitperiod},
+           given={A.L.},
+           given_i={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Morgan \& Claypool Publishers}%
+      }
+      \strng{namehash}{1f56630690260fa730b7fc972893c96a}
+      \strng{fullhash}{1f56630690260fa730b7fc972893c96a}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781627054317}
+      \field{series}{Synthesis Lectures on Biomedical Engineering}
+      \field{title}{Digital Image Processing for Ophthalmology: Detection and Modeling of Retinal Vascular Architecture}
+      \field{year}{2014}
+    \endentry
+    \entry{szeliski}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f2e556c93256e7d70895d67702e14f1a}{%
+           family={Szeliski},
+           family_i={S\bibinitperiod},
+           given={Richard},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{f2e556c93256e7d70895d67702e14f1a}
+      \strng{fullhash}{f2e556c93256e7d70895d67702e14f1a}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Computer Vision: Algorithms and Applications}
+      \field{year}{2010}
+      \verb{url}
+      \verb http://szeliski.org/Book/
+      \endverb
+    \endentry
+    \entry{huiqi_li}{article}{}
+      \name{author}{2}{}{%
+        {{hash=76290b916e92efba4446928887bb0fc5}{%
+           family={Li},
+           family_i={L\bibinitperiod},
+           given={Huiqi},
+           given_i={H\bibinitperiod}}}%
+        {{hash=4694b2a2ccfdf7f87324d3da5ba11cc1}{%
+           family={Chutatape},
+           family_i={C\bibinitperiod},
+           given={O.},
+           given_i={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{e40949a87647ab4e32ae3f676d149c84}
+      \strng{fullhash}{e40949a87647ab4e32ae3f676d149c84}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0018-9294}
+      \field{journaltitle}{IEEE Transactions on Biomedical Engineering}
+      \field{month}{02}
+      \field{number}{2}
+      \field{title}{Automated feature extraction in color retinal images by a model based approach}
+      \field{volume}{51}
+      \field{year}{2004}
+      \field{pages}{246\bibrangedash 254}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/TBME.2003.820400
+      \endverb
+      \keyw{biomedical optical imaging;colour photography;diseases;edge detection;eye;feature extraction;image colour analysis;iterative methods;medical image processing;principal component analysis;vision defects;automated feature extraction;automatic mass screening;biomedical image processing;color retinal images;combined region growing;diabetic retinopathy;disk boundary detection;edge detection;exudates;eye diseases;fovea localization;fundus coordinate system;iterative searching;model based approach;modified active shape model;optic disk;point distribution model;principal component analysis;retinal photography;sensitivity;specificity;Active shape model;Diseases;Feature extraction;Image edge detection;Optical detectors;Optical devices;Optical sensors;Photography;Principal component analysis;Retina;Algorithms;Color;Colorimetry;Exudates and Transudates;Humans;Image Enhancement;Image Interpretation,Computer-Assisted;Optic Disk;Pattern Recognition,Automated;Photography;Reproducibility of Results;Retina;Sensitivity and Specificity}
+    \endentry
+    \entry{chernomorets}{article}{}
+      \name{author}{8}{}{%
+        {{hash=13c938d4698a3fb8749eb0ea829e9103}{%
+           family={Chernomorets},
+           family_i={C\bibinitperiod},
+           given={A.A.},
+           given_i={A\bibinitperiod}}}%
+        {{hash=8439ffe7f2e341dcee9198e31229fd3c}{%
+           family={Krylov},
+           family_i={K\bibinitperiod},
+           given={A.S.},
+           given_i={A\bibinitperiod}}}%
+        {{hash=35d17cbce75bf62c44361d6c37fd208d}{%
+           family={Nasonov},
+           family_i={N\bibinitperiod},
+           given={A.V.},
+           given_i={A\bibinitperiod}}}%
+        {{hash=beee543e0f79717dcca51c69d86c8540}{%
+           family={Semashko},
+           family_i={S\bibinitperiod},
+           given={A.S.},
+           given_i={A\bibinitperiod}}}%
+        {{hash=803da0a1430a853867f5e6cfb537e0b9}{%
+           family={Sergeev},
+           family_i={S\bibinitperiod},
+           given={V.V.},
+           given_i={V\bibinitperiod}}}%
+        {{hash=b1bfc7846d1ed682bcfb9f440b7117e0}{%
+           family={Akopyan},
+           family_i={A\bibinitperiod},
+           given={V.S.},
+           given_i={V\bibinitperiod}}}%
+        {{hash=b02232d9c64ecc2e42a5343d5d594961}{%
+           family={Rodin},
+           family_i={R\bibinitperiod},
+           given={A.S.},
+           given_i={A\bibinitperiod}}}%
+        {{hash=5c44e36cd09fea95ed946708489fc6a0}{%
+           family={Semenova},
+           family_i={S\bibinitperiod},
+           given={N.S.},
+           given_i={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{946cc87291c6676e7bc1665e4530d51b}
+      \strng{fullhash}{4592d8f1ae1e8afc029b1dbfc3c6c798}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{21-th International Conference on Computer Graphics GraphiCon}
+      \field{title}{Automated processing of retinal images}
+      \field{year}{2011}
+      \field{pages}{78\bibrangedash 81}
+      \range{pages}{4}
+    \endentry
+    \entry{GVF}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=0786880c98de616350d4d3d04ce340ec}{%
+           family={Xu},
+           family_i={X\bibinitperiod},
+           given={Chenyang},
+           given_i={C\bibinitperiod}}}%
+        {{hash=e7a71ea8794c27f239aa6bc18d54a9c9}{%
+           family={Prince},
+           family_i={P\bibinitperiod},
+           given={J.\bibnamedelimi L.},
+           given_i={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{5d980fc1cd6bdc48866f55989010423d}
+      \strng{fullhash}{5d980fc1cd6bdc48866f55989010423d}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Computer Vision and Pattern Recognition, 1997. Proceedings., 1997 IEEE Computer Society Conference}
+      \field{issn}{1063-6919}
+      \field{month}{06}
+      \field{title}{Gradient vector flow: a new external force for snakes}
+      \field{year}{1997}
+      \field{pages}{66\bibrangedash 71}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/CVPR.1997.609299
+      \endverb
+      \keyw{computer vision;image processing;active contours;binary edge map;computer vision;external force;gradient vector flow;image processing;initialization;object boundaries;real image;simulated images;snakes;Active contours;Application software;Computational modeling;Convergence;Image edge detection;Image processing;Image segmentation;Shape;Tracking;Vectors}
+    \endentry
+    \entry{jose}{article}{}
+      \name{author}{2}{}{%
+        {{hash=06a30554c4b9b90ce18b56cb8d7652cf}{%
+           family={Jose},
+           family_i={J\bibinitperiod},
+           given={Jyothis},
+           given_i={J\bibinitperiod}}}%
+        {{hash=ecffc4545b42c41c81a7f4a90a3551a4}{%
+           family={Kuruvilla},
+           family_i={K\bibinitperiod},
+           given={Jinsa},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{080094a956a8fd3a9f9d859a1b175d59}
+      \strng{fullhash}{080094a956a8fd3a9f9d859a1b175d59}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2319-7242}
+      \field{issue}{10}
+      \field{journaltitle}{{I}nternational {J}ournal of {E}ngineering and {C}omputer {S}cience}
+      \field{month}{10}
+      \field{title}{Detection of Red Lesions and Hard Exudates in Color Fundus Images}
+      \field{volume}{3}
+      \field{year}{2014}
+      \field{pages}{8583\bibrangedash 8588}
+      \range{pages}{6}
+    \endentry
+    \entry{qui_li}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=50f6285de687cc0465919582c577252c}{%
+           family={Li},
+           family_i={L\bibinitperiod},
+           given={Q.},
+           given_i={Q\bibinitperiod}}}%
+        {{hash=7ed730dcd73eb8e2432f6112b0ae092f}{%
+           family={You},
+           family_i={Y\bibinitperiod},
+           given={J.},
+           given_i={J\bibinitperiod}}}%
+        {{hash=4f9d4d2fa5b60c96090e0f4219c11d2c}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={L.},
+           given_i={L\bibinitperiod}}}%
+        {{hash=ca253bb36195b519e0c2d78355a95d04}{%
+           family={Bhattacharya},
+           family_i={B\bibinitperiod},
+           given={P.},
+           given_i={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{953f7d251def794ca8d59651a74cf7f0}
+      \strng{fullhash}{ef01b05477ef1704d26da0bbafefd839}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2006 IEEE International Conference on Systems, Man and Cybernetics}
+      \field{issn}{1062-922X}
+      \field{month}{10}
+      \field{title}{A Multiscale Approach to Retinal Vessel Segmentation Using Gabor Filters and Scale Multiplication}
+      \field{volume}{4}
+      \field{year}{2006}
+      \field{pages}{3521\bibrangedash 3527}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/ICSMC.2006.384665
+      \endverb
+      \keyw{Gabor filters;blood vessels;diseases;eye;image segmentation;medical image processing;Gabor filter;adaptive thresholding;automated retinal vessel image segmentation;computer aided diagnosis;medical disease diagnosis;multiscale analysis;ocular fundus;scale multiplication;vessel abnormality;Biomedical imaging;Blood vessels;Cybernetics;Diseases;Gabor filters;Image processing;Image segmentation;Medical diagnosis;Retina;Retinal vessels}
+    \endentry
+    \entry{choras}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=2169430686942c039ae31573e50f02a4}{%
+           family={Choras},
+           family_i={C\bibinitperiod},
+           given={Ryszard\bibnamedelima S.},
+           given_i={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Canary Islands, Spain}%
+      }
+      \strng{namehash}{2169430686942c039ae31573e50f02a4}
+      \strng{fullhash}{2169430686942c039ae31573e50f02a4}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 10th WSEAS International Conference on Telecommunications and Informatics and Microelectronics, Nanoelectronics, Optoelectronics, and WSEAS International Conference on Signal Processing}
+      \field{isbn}{978-1-61804-005-3}
+      \field{series}{TELE-INFO'11/MINO'11/SIP'11}
+      \field{title}{Ocular Biometrics: Automatic Feature Extraction from Eye Images}
+      \field{year}{2011}
+      \field{pages}{179\bibrangedash 183}
+      \range{pages}{5}
+      \verb{url}
+      \verb http://dl.acm.org/citation.cfm?id=2001362.2001397
+      \endverb
+      \keyw{Gabor transform,conjunctiva image,feature extraction,retina image,texture features}
+    \endentry
+    \entry{karegowda}{article}{}
+      \name{author}{4}{}{%
+        {{hash=4b4d7479a2d9961beefa541f8cc4fd6b}{%
+           family={Karegowda},
+           family_i={K\bibinitperiod},
+           given={Asha\bibnamedelima Gowda},
+           given_i={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=43e1e4d86bf3983ba40d9c4a8d9347e8}{%
+           family={Nasiha},
+           family_i={N\bibinitperiod},
+           given={Asfiya},
+           given_i={A\bibinitperiod}}}%
+        {{hash=26bdfea40b0d68545988318476e080e1}{%
+           family={Jayaram},
+           family_i={J\bibinitperiod},
+           given={M.A.},
+           given_i={M\bibinitperiod}}}%
+        {{hash=9e6c3a6e332ca71072e81545b65d6203}{%
+           family={Manjunath},
+           family_i={M\bibinitperiod},
+           given={A.S.},
+           given_i={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8a820747d693e852dd869cd2b9931e07}
+      \strng{fullhash}{136fcfb2273953eb0bb39ba5420e43bd}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Computer Applications}
+      \field{month}{07}
+      \field{number}{3}
+      \field{title}{Exudates Detection in Retinal Images using Back Propagation Neural Network}
+      \field{volume}{25}
+      \field{year}{2011}
+      \field{pages}{25\bibrangedash 31}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.5120/3011-4062
+      \endverb
+    \endentry
+    \entry{sinthanayothin}{article}{}
+      \name{author}{7}{}{%
+        {{hash=bff1895a63d4c60f1cd43dd1f88f17df}{%
+           family={Sinthanayothin},
+           family_i={S\bibinitperiod},
+           given={C.},
+           given_i={C\bibinitperiod}}}%
+        {{hash=fe1457715867e9e57a38a4485542ef58}{%
+           family={Boyce},
+           family_i={B\bibinitperiod},
+           given={J.\bibnamedelimi F.},
+           given_i={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=907506cd344045a64c6356eb51d41543}{%
+           family={Williamson},
+           family_i={W\bibinitperiod},
+           given={T.\bibnamedelimi H.},
+           given_i={T\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=6aa9a1b8eb0fa556bd02fc5f45c8382c}{%
+           family={Cook},
+           family_i={C\bibinitperiod},
+           given={H.\bibnamedelimi L.},
+           given_i={H\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=6267cf029d197b6b2018efd103d3fa24}{%
+           family={Mensah},
+           family_i={M\bibinitperiod},
+           given={E.},
+           given_i={E\bibinitperiod}}}%
+        {{hash=09213505a9d0ee64bb655fe36ae23388}{%
+           family={Lal},
+           family_i={L\bibinitperiod},
+           given={S.},
+           given_i={S\bibinitperiod}}}%
+        {{hash=1255bf77bad47dff2a561c5c01c6f03b}{%
+           family={Usher},
+           family_i={U\bibinitperiod},
+           given={D.},
+           given_i={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{def75633e35b67695c6a8ffbea55027a}
+      \strng{fullhash}{c225e7956714e9eea654e552a345ad12}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{2}
+      \field{journaltitle}{Diabetic Medicine}
+      \field{title}{Automated detection of diabetic retinopathy on digital fundus images}
+      \field{volume}{19}
+      \field{year}{2002}
+      \field{pages}{105\bibrangedash 112}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1046/j.1464-5491.2002.00613.x
+      \endverb
+    \endentry
+    \entry{otsu}{article}{}
+      \name{author}{1}{}{%
+        {{hash=02635862778ca36efc7d4fb7469fbf5f}{%
+           family={N.},
+           family_i={N\bibinitperiod},
+           given={Otsu},
+           given_i={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{02635862778ca36efc7d4fb7469fbf5f}
+      \strng{fullhash}{02635862778ca36efc7d4fb7469fbf5f}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0018-9472}
+      \field{journaltitle}{IEEE Transactions on Systems, Man, and Cybernetics}
+      \field{month}{01}
+      \field{number}{1}
+      \field{title}{A Threshold Selection Method from Gray-Level Histograms}
+      \field{volume}{9}
+      \field{year}{1979}
+      \field{pages}{62\bibrangedash 66}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/TSMC.1979.4310076
+      \endverb
+      \keyw{Displays;Gaussian distribution;Histograms;Least squares approximation;Marine vehicles;Q measurement;Radar tracking;Sea measurements;Surveillance;Target tracking}
+    \endentry
+    \entry{shapes}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8655fe238cc44ea2f31bcc8435734d23}{%
+           family={Mingqiang},
+           family_i={M\bibinitperiod},
+           given={Yang},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=aea9fcd60aa09f070702a18a410ed157}{%
+           family={Kidiyo},
+           family_i={K\bibinitperiod},
+           given={Kpalma},
+           given_i={K\bibinitperiod}}}%
+        {{hash=5301987fbd308a57ab4fdd2b080c3169}{%
+           family={Joseph},
+           family_i={J\bibinitperiod},
+           given={Ronsin},
+           given_i={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {InTech}%
+      }
+      \strng{namehash}{b48a2a8be004175119f99bacb9a378e8}
+      \strng{fullhash}{b48a2a8be004175119f99bacb9a378e8}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Pattern Recognition Techniques, Technology and Applications}
+      \field{title}{A Survey of Shape Feature Extraction Techniques}
+      \field{year}{2008}
+      \verb{doi}
+      \verb 10.5772/6237
+      \endverb
+    \endentry
+    \entry{niemeijer}{article}{}
+      \name{author}{5}{}{%
+        {{hash=74cbfc2554af69d787787c8f3a58a37a}{%
+           family={Niemeijer},
+           family_i={N\bibinitperiod},
+           given={M.},
+           given_i={M\bibinitperiod}}}%
+        {{hash=2bfbb4eaf6de110b1d898eb586854237}{%
+           prefix={van},
+           prefix_i={v\bibinitperiod},
+           family={Ginneken},
+           family_i={G\bibinitperiod},
+           given={B.},
+           given_i={B\bibinitperiod}}}%
+        {{hash=09aea31041ebf2d878cd3743ec3e21a0}{%
+           family={Staal},
+           family_i={S\bibinitperiod},
+           given={J.},
+           given_i={J\bibinitperiod}}}%
+        {{hash=ecb6f3ef8109d5c8f93e33344e264189}{%
+           family={Suttorp-Schulten},
+           family_i={S\bibinithyphendelim S\bibinitperiod},
+           given={M.\bibnamedelimi S.\bibnamedelimi A.},
+           given_i={M\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=a2b93c2a9579abe2946dd6bd1657c08d}{%
+           family={Abramoff},
+           family_i={A\bibinitperiod},
+           given={M.\bibnamedelimi D.},
+           given_i={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{327e91625c87ca2eb77f6b7ff1601135}
+      \strng{fullhash}{5285d42df413c9ec6d48d897fb66c318}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0278-0062}
+      \field{journaltitle}{IEEE Transactions on Medical Imaging}
+      \field{month}{05}
+      \field{number}{5}
+      \field{title}{Automatic detection of red lesions in digital color fundus photographs}
+      \field{volume}{24}
+      \field{year}{2005}
+      \field{pages}{584\bibrangedash 592}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/TMI.2005.843738
+      \endverb
+      \keyw{biomedical optical imaging;colour photography;diseases;eye;image classification;medical image processing;automated screening systems;automatic red lesion detection;diabetic retinopathy;digital color fundus photographs;k-nearest neighbor classifier;pixel classification;vasculature;Biomedical imaging;Blindness;Cities and towns;Diabetes;Lesions;Medical diagnostic imaging;Object detection;Performance evaluation;Retinopathy;Robustness;Computer-aided diagnosis;fundus;microaneurysms;pixel classification;red lesions;retina;screening;Algorithms;Artificial Intelligence;Colorimetry;Computer Graphics;Diabetic Retinopathy;Humans;Image Enhancement;Image Interpretation,Computer-Assisted;Numerical Analysis,Computer-Assisted;Ophthalmoscopy;Pattern Recognition,Automated;Photography;Reproducibility of Results;Sensitivity and Specificity;Signal Processing,Computer-Assisted}
+    \endentry
+    \entry{diaretdb1}{inproceedings}{}
+      \name{author}{10}{}{%
+        {{hash=626252d55d4d5789abde2469a91834eb}{%
+           family={Kauppi},
+           family_i={K\bibinitperiod},
+           given={T.},
+           given_i={T\bibinitperiod}}}%
+        {{hash=3d91485a7a54a8b1f9f544260be87492}{%
+           family={Kalesnykiene},
+           family_i={K\bibinitperiod},
+           given={V.},
+           given_i={V\bibinitperiod}}}%
+        {{hash=653906809774b11b537a22ca9afa49dc}{%
+           family={Kamarainen},
+           family_i={K\bibinitperiod},
+           given={J.-K.},
+           given_i={J\bibinithyphendelim K\bibinitperiod}}}%
+        {{hash=39b723f198dfff6004d24f33b105ce86}{%
+           family={Lensu},
+           family_i={L\bibinitperiod},
+           given={L.},
+           given_i={L\bibinitperiod}}}%
+        {{hash=a6a022d128dee77f9212f7eb782171d1}{%
+           family={Sorri},
+           family_i={S\bibinitperiod},
+           given={I.},
+           given_i={I\bibinitperiod}}}%
+        {{hash=db5609340b9e172d84b8457c90f3d526}{%
+           family={A.},
+           family_i={A\bibinitperiod},
+           given={Raninen},
+           given_i={R\bibinitperiod}}}%
+        {{hash=f1005827eeeb7153200e6c7ea40330b0}{%
+           family={R.},
+           family_i={R\bibinitperiod},
+           given={Voutilainen},
+           given_i={V\bibinitperiod}}}%
+        {{hash=43d1d6f649051ed79a03f4b4695ae615}{%
+           family={Uusitalo},
+           family_i={U\bibinitperiod},
+           given={H.},
+           given_i={H\bibinitperiod}}}%
+        {{hash=6f7d1de1619ee55248ae027e9c3997c4}{%
+           family={Kälviäinen},
+           family_i={K\bibinitperiod},
+           given={H.},
+           given_i={H\bibinitperiod}}}%
+        {{hash=c9f3ea1c4d6dc466c61c4875bea46d06}{%
+           family={Pietilд},
+           family_i={P\bibinitperiod},
+           given={J.},
+           given_i={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Aberystwyth, Wales}%
+      }
+      \strng{namehash}{cfdb14bb668f8db9d20005cfe870c672}
+      \strng{fullhash}{04d6c1874a75854fb256d9d8ec5193a6}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of 11th Conf. on Medical Image Understanding and Analysis}
+      \field{title}{DIARETDB1 diabetic retinopathy database and evaluation protocol}
+      \field{year}{2007}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

@@ -1,0 +1,21 @@
+[0] Config.pm:340> INFO - This is Biber 2.4
+[1] Config.pm:343> INFO - Logfile is 'Coursework - Retinopathy.blg'
+[117] biber:287> INFO - === Сб июн 18, 2016, 11:46:19
+[286] Biber.pm:348> INFO - Reading 'Coursework - Retinopathy.bcf'
+[462] Biber.pm:739> INFO - Using all citekeys in bib section 0
+[566] Biber.pm:3151> INFO - Processing section 0
+[823] Biber.pm:3308> INFO - Looking for bibtex format file 'references.bib' for section 0
+[914] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
+[967] bibtex.pm:974> INFO - Found BibTeX data source 'references.bib'
+[1548] Utils.pm:147> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[1549] Utils.pm:147> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[1549] Utils.pm:147> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[1549] Utils.pm:147> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[1549] Utils.pm:147> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[1550] Utils.pm:147> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[1854] UCollate.pm:65> INFO - Overriding locale 'ru-RU' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1854] UCollate.pm:65> INFO - Overriding locale 'ru-RU' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1855] Biber.pm:3028> INFO - Sorting list 'none/global' of type 'entry' with scheme 'none' and locale 'ru-RU'
+[1900] bbl.pm:519> INFO - Writing 'Coursework - Retinopathy.bbl' with encoding 'UTF-8'
+[2029] bbl.pm:615> INFO - Output to Coursework - Retinopathy.bbl
+[2029] Biber.pm:109> INFO - WARNINGS: 6

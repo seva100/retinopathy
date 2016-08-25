@@ -1,0 +1,925 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\usepackage[russian,english]{babel}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{amssymb,amsmath,mathrsfs,amsthm}
+
+\let\oldfootnote\footnote
+\renewcommand\footnote[1][]{\oldfootnote[frame,#1]}
+
+\usepackage{perpage} %the perpage package
+\MakePerPage{footnote} %the perpage package command
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Сегментация глазных снимков]{Построение признаков снимков глазного дна для диагностики болезней глаз} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Артём Севастопольский} % Your name
+\institute[] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+ММП ВМК МГУ \\ % Your institution for the title page
+%\medskip
+%\textit{artem.sevastopolsky@gmail.com} % Your email address
+}
+\date{16 мая, 2016} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Содержание} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{Введение} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Процесс съёмки глаза. Глазные болезни}
+	
+	\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+		
+		\column{.45\textwidth} % Left column and width
+		
+		\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{pics/DESP-Camera-Colour}
+		%\caption{}
+		\label{fig:DESP-Camera-Colour}
+		\end{figure}
+		
+		\begin{figure}
+		\centering
+		\includegraphics[width=1.0\linewidth]{pics/retinal-screening}
+		%\caption{}
+		\label{fig:retinal-screening}
+		\end{figure}
+		
+		\column{.5\textwidth} % Right column and width
+		
+		\begin{figure}
+		\centering
+		\includegraphics[width=0.8\linewidth]{pics/KowaCam-Poster1A}
+		%\caption{}
+		\label{fig:KowaCam-Poster1A}
+		\end{figure}
+	
+	\end{columns}
+	
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Снимок глазного дна}
+	
+	\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+		
+		\column{.45\textwidth} % Left column and width
+		
+		По снимкам глазного дна можно выявить:
+		\begin{itemize}
+			\item Диабетическую ретинопатию
+			\item Глаукому
+			\item Возрастную дегенерацию макулы, и др.
+		\end{itemize}
+		
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.9\linewidth]{pics/diabetic-retinopathy}
+			%\caption{}
+			\label{fig:diabetic-retinopathy}
+		\end{figure}
+		
+		\column{.5\textwidth} % Right column and width
+		
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.7\linewidth]{pics/image006}
+			%\caption{}
+			\label{fig:image006}
+		\end{figure}
+		
+		\begin{figure}
+		\centering
+		\includegraphics[width=0.9\linewidth]{pics/glaucoma-cupping-1024x414}
+		%\caption{}
+		\label{fig:glaucoma-cupping-1024x414}
+		\end{figure}
+		
+		
+	\end{columns}
+	
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Строение глазного дна}
+	
+	\begin{itemize}
+		\item Видимые на снимке элементы: оптический диск, кровеносные сосуды, макула
+		\item Признаки диабетической ретинопатии: экссудаты (белые пятна), геморрагии (черные или красные пятна), микроаневризмы (мелкие красные точки)
+	\end{itemize}
+	
+	\begin{columns}[c]
+		\column{.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=1.1\linewidth]{pics/Eye_structure}
+				%\caption{}
+				\label{fig:Eye_structure}
+			\end{figure}
+		
+		\column{.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=1.0\linewidth]{pics/Fundus_structure}
+				%\caption{}
+				\label{fig:Fundus_structure}
+			\end{figure}
+		
+	\end{columns}
+	
+	
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Диабетическая ретинопатия}
+	
+	%\begin{columns}[c]
+		%\column{.5\textwidth}
+			\begin{itemize}
+				\item Диабетическая ретинопатия: 120 млн. больных по всему миру (2010 г.). Проявляется у 75\% больных сахарным диабетом в течение 20 лет.
+				\item Признаки диабетической ретинопатии: экссудаты (белые пятна), геморрагии (черные или красные пятна), микроаневризмы (мелкие красные точки).
+				\item Kaggle-соревнование \href{https://www.kaggle.com/c/diabetic-retinopathy-detection/}{\texttt{Diabetic Retinopathy Detection}}, 2015 г. --- 35000 снимков.
+			\end{itemize}
+		%\column{.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.6\linewidth]{pics/kaggle_title_page}
+				%\caption{}
+				\label{fig:kaggle_title_page}
+			\end{figure}
+	%\end{columns}
+\end{frame}
+
+%------------------------------------------------
+\section{Сегментация оптического диска}
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Сегментация оптического диска}
+	
+	Для сегментации оптического диска используются техники компьютерного зрения.
+	\begin{columns}[c]
+		\column{.3\textwidth}
+		
+			\begin{figure}
+			\centering
+			\includegraphics[width=1.1\linewidth]{pics/optic_disk_1a}
+			%\caption{}
+			\label{fig:optic_disk_1a}
+			\end{figure}
+					
+		\column{.3\textwidth}
+			
+			\begin{figure}
+			\centering
+			\includegraphics[width=1.1\linewidth]{pics/optic_disk_1b}
+			%\caption{}
+			\label{fig:optic_disk_1b}
+			\end{figure}
+		
+		\column{.3\textwidth}
+			
+			\begin{figure}
+			\centering
+			\includegraphics[width=1.1\linewidth]{pics/optic_disk_1c}
+			%\caption{}
+			\label{fig:optic_disk_1c}
+			\end{figure}
+		
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Поиск центра оптического диска}
+	\begin{columns}[c]
+		\column{.7\textwidth}
+		Предлагаемый метод основан на техниках компьютерного зрения.
+		\begin{enumerate}
+			\item Усиление контраста и бинаризация
+			\begin{itemize}
+				\item Из цветного изображения извлекается канал I разложения HSI:
+				$$ I = \frac{R + G + B}{3} $$
+				
+				\item Медианная фильтрация и CLAHE
+				\item Бинаризация отсечением по порогу
+			\end{itemize}
+			Будем называть полученное бинарное изображение $I_{seeds}$.
+		\end{enumerate}
+		\column{.3\textwidth}
+		\begin{figure}[t!]
+			%\centering
+			\includegraphics[width=0.8\linewidth]{pics/optic_disk/1}
+			%\caption[1]{Канал I}
+			\label{fig:1}
+		\end{figure}
+		\begin{figure}[t!]
+			%\centering
+			\includegraphics[width=0.8\linewidth]{pics/optic_disk/2}
+			%\caption[2]{После CLAHE}
+			\label{fig:2}
+		\end{figure}
+		\begin{figure}[t!]
+			%\centering
+			\includegraphics[width=0.8\linewidth]{pics/optic_disk/3}
+			%\caption[3]{$I_{seeds}$}
+			\label{fig:3}
+		\end{figure}
+	\end{columns}
+	
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}[fragile]
+	\frametitle{Поиск центра оптического диска}
+	
+	\begin{columns}[c]
+		\column{.75\textwidth}
+		\begin{enumerate}	
+			\setcounter{enumi}{1}
+			\item Удаление ярких экссудатов
+			\begin{itemize}
+				\item Изображение, полученное после CLAHE, разбивается на связные области с помощью алгоритма Region growing, основанного на поиске в ширину. В качестве начальных точек выбираются белые точки в $I_{seeds}$.
+				\item На изображении оставляются только те компоненты, площадь которых лежит в определённых пределах.
+				\item Применяется морфологическая операция закрытия, затем операция закрытия дырок (все связные области белых пикселей закрашиваются белым цветом).
+			\end{itemize}
+		\end{enumerate}
+		
+		\column{.25\textwidth}
+			\begin{figure}
+			\centering
+			\includegraphics[width=1.0\linewidth]{pics/optic_disk/4}
+			%\caption{}
+			\label{fig:4}
+			\end{figure}
+			\begin{figure}
+			\centering
+			\includegraphics[width=1.0\linewidth]{pics/optic_disk/5}
+			%\caption{}
+			\label{fig:5}
+			\end{figure}
+	\end{columns}
+	\vspace{0.3cm}
+	По итоговой карте можно оценить центр и радиус оптического диска.
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Поиск центра оптического диска}
+	\begin{itemize}
+		\item На данных выборки \href{http://www.it.lut.fi/project/imageret/diaretdb1/}{\textbf{DIARETDB1}}, состоящей из 90 снимков, метод правильно оценил центр и радиус оптического диска (с точностью в 10 пикселей) в 81\% случаев и
+		правильно локализовал оптический диск в прямоугольной окрестности в 83\% случаев.
+		\item Могут быть применены более точные методы поиска границы оптического диска.
+	\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Поиск границы оптического диска}
+	
+	Модель Active Shape Model (ASM)
+	
+	\begin{columns}[c]
+		\column{.6\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.6\linewidth]{pics/optic_disk_asm}
+				%\caption{}
+				\label{fig:optic_disk_asm}
+			\end{figure}
+		\column{.4\textwidth}
+			\begin{figure}
+			\centering
+			\includegraphics[width=0.85\linewidth]{pics/asm_faces}
+			%\caption{}
+			\label{fig:asm_faces}
+			\end{figure}
+	\end{columns}
+	\vspace{0.3cm}
+	{\scriptsize
+	{\color{gray} Huiqi Li <<A Model-Based Approach for Automated Feature Extraction in Fundus Images>>}
+	
+	{\color{gray} Tim Cootes <<An Introduction to Active Shape Models>>}}
+\end{frame}
+
+% TODO вставить про CLAHE
+
+%------------------------------------------------
+\section{Сегментация кровеносных сосудов}
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Сегментация кровеносных сосудов}
+	
+	Для сегментации кровеносных сосудов применяются фильтры Габора.
+	\begin{columns}[c]
+		\column{.3\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=1.0\linewidth]{pics/vessels_1a}
+				%\caption{}
+				\label{fig:vessels_1a}
+			\end{figure}
+		\column{.3\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=1.0\linewidth]{pics/vessels_1b}
+				%\caption{}
+				\label{fig:vessels_1b}
+			\end{figure}
+		\column{.3\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=1.0\linewidth]{pics/vessels_1c}
+				%\caption{}
+				\label{fig:vessels_1c}
+			\end{figure}
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Фильтр Габора}
+	
+	\begin{columns}[c]
+		\column{.5\textwidth}
+		\begin{itemize}
+			\item Фильтр Габора усиливает линии определённого направления и определённой толщины.
+			\item Классический фильтр Габора имеет следующее ядро:
+			\begin{equation}
+				\begin{split}
+					&g_{\sigma_x, \sigma_y, f, \theta}(x, y) = \exp\left[ -\pi \left(  \frac{x'^2}{\sigma_x^2} + \frac{y'^2}{\sigma_y^2} \right) \right] \exp\left( 2\pi i f	 x' \right) \\
+					&x' = x\cos\theta + y\sin\theta \\ 
+					&y' = -x\sin\theta + y\cos\theta \\ \nonumber
+					&x = \overline{-r, r}, \, y = \overline{-r, r},
+				\end{split}
+				\label{formula:gabor}
+			\end{equation}
+		\end{itemize}
+		
+		\column{.5\textwidth}
+			\begin{figure}[t]
+			%\centering
+			\includegraphics[width=0.9\linewidth]{pics/gabrea}
+			%\caption{}
+			\label{fig:gabrea}
+			\end{figure}
+			
+			\vspace{3cm}
+	\end{columns}
+	\vspace{0.5cm}
+	{\color{gray} \scriptsize Изображения взяты с \url{http://blog.csdn.net/garfielder007}}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}[fragile]
+	\frametitle{Сегментация кровеносных сосудов}
+	\vspace*{-0.3cm}
+	\begin{columns}[c]
+		\column{.7\textwidth}
+		\begin{enumerate}	
+			\setcounter{enumi}{0}
+			\item Предобработка и усиление контраста
+			\begin{itemize}
+				\item Из цветного изображения извлекается канал I разложения HSI:
+				$$ I = \frac{R + G + B}{3} $$
+				
+				\item CLAHE
+				\item Медианная фильтрация; результат медианной фильтрации вычитается из изображения
+				\item Инвертирование изображения (фильтр Габора должен реагировать на сосуды, имеющие высокую интенсивность, а не низкую)
+			\end{itemize}
+		\end{enumerate}
+		\column{.3\textwidth}
+			\begin{figure}
+			%\centering
+			\includegraphics[width=1.0\linewidth]{pics/vessels/1}
+			%\caption{}
+			\label{fig:1}
+			\end{figure}
+			\vspace*{-1.5cm}
+			\begin{figure}
+			%\centering
+			\includegraphics[width=1.0\linewidth]{pics/vessels/2}
+			%\caption{}
+			\label{fig:2}
+			\end{figure}
+			\vspace*{-1.5cm}
+			\begin{figure}
+			%\centering
+			\includegraphics[width=1.0\linewidth]{pics/vessels/3}
+			%\caption{}
+			\label{fig:3}
+			\end{figure}
+		
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Сегментация кровеносных сосудов}
+	
+	\begin{columns}[c]
+		\column{.7\textwidth}
+		\begin{enumerate}
+			\setcounter{enumi}{1}
+			\item Применение фильтра Габора и бинаризация
+			\begin{itemize}
+				\item Производится свертка изображения с каждым фильтром из банка фильтров Габора, соответствующих различным параметрам $\theta$. Затем берётся максимум по всем $\theta$ в каждой точке. Параметры определяются формулами, предложенными в работе \textit{Q. Li et al.}\footnote{\scriptsize \textit{Q. Li et al. <<A Multiscale Approach to Retinal Vessel Segmentation Using Gabor Filters and Scale Multiplication>>}}.
+				\item Бинаризация изображения с порогом, равным 95\%-перцентилю распределения пикселей. Удаляются связные компоненты малой площади.
+			\end{itemize}
+		\end{enumerate}
+		\column{.3\textwidth}
+		
+		\begin{figure}
+		%\centering
+		\includegraphics[width=1.0\linewidth]{pics/vessels/4}
+		%\caption{}
+		\label{fig:4}
+		\vspace*{-1.5cm}
+		\end{figure}
+		\begin{figure}
+		%\centering
+		\includegraphics[width=1.0\linewidth]{pics/vessels/final}
+		%\caption{}
+		\label{fig:final}
+		\end{figure}
+		
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Cегментация кровеносных сосудов}
+	
+	\begin{itemize}
+		\item На части выборки STARE из 20 снимков, для которой известна экспертная разметка кровеносных сосудов, метод достиг чувствительности (доли правильно классифицированных пикселей среди
+		принадлежащих сосудам) 90\% и специфичности (доли правильно классифицированных пикселей среди не принадлежащих сосудам) 76\%.
+	\end{itemize}
+\end{frame}
+
+
+%------------------------------------------------
+\section{Сегментация экссудатов}
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Сегментация экссудатов}
+	
+	Для сегментации экссудатов применяются методы обучения с учителем (объекты --- пиксели).
+	\begin{columns}[c]
+		\column{.3\textwidth}
+			\begin{figure}
+			\centering
+			\includegraphics[width=1.1\linewidth]{pics/exudates_1a}
+			%\caption{}
+			\label{fig:exudates_1a}
+			\end{figure}
+		\column{.3\textwidth}
+			\begin{figure}
+			\centering
+			\includegraphics[width=1.1\linewidth]{pics/exudates_1b}
+			%\caption{}
+			\label{fig:exudates_1b}
+			\end{figure}
+		\column{.3\textwidth}
+			\begin{figure}
+			\centering
+			\includegraphics[width=1.1\linewidth]{pics/exudates_1c}
+			%\caption{}
+			\label{fig:exudates_1c}
+			\end{figure}
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Сегментация экссудатов}
+	{\small Применяются методы обучения с учителем (объекты --- пиксели). Используется выборка \textbf{DIARETDB1} из 90 снимков.}
+	
+	
+	\begin{columns}[c]
+		\column{.75\textwidth}
+		
+		\begin{enumerate}
+			\footnotesize
+			\setcounter{enumi}{0}
+			\item Предобработка и усиление контраста
+			\begin{itemize}
+				\item Из цветного изображения извлекаются каналы S и I разложения HSI:
+				\begin{equation}
+				\begin{split}
+					\alpha &= R - \frac{1}{2} (G - B), \beta = \frac{\sqrt{3}}{2} (G - B)\\
+					H &= atan2(\beta, \alpha)\\ \nonumber
+					&\text{(в случае R = G = B = 0, S = 1})\\
+					&I = \frac{R + G + B}{3}\\
+				\end{split}
+				\end{equation}
+				\item Медианная фильтрация и CLAHE канала I
+				\item Экссудаты и оптический диск имеют схожие значения яркости. Окрестность оптического диска далее не рассматривается.
+			\end{itemize}
+			\normalsize
+		\end{enumerate}
+		\column{.25\textwidth}
+		
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Сегментация экссудатов}
+	
+	\begin{columns}[c]
+		\column{.75\textwidth}
+		
+		\begin{enumerate}
+			\footnotesize
+			\setcounter{enumi}{1}
+			\item Извлечение признаков и классификация
+			\begin{itemize}
+				\item Для каждой рассматриваемой точки извлекаются следующие признаки:
+				\begin{itemize}
+					\item \textbf{hue} --- значение канала H в данной точке
+					\item \textbf{intensity} --- значение канала I в данной точке
+					\item \textbf{mean intensity} --- среднее значение канала I в окрестности данной точки
+					\item \textbf{std intensity} --- стандартное отклонение значений канала I в окрестности данной точки
+					\item \textbf{distance to optic disk} --- расстояние до центра оптического диска
+				\end{itemize}
+				\item Признаки всех пикселей всех изображений формируют обучающую выборку. Настраивается классификатор (Random Forest или нейронная сеть).
+				\normalsize
+			\end{itemize}
+		\end{enumerate}
+		\column{.25\textwidth}
+		
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Сегментация экссудатов}
+	
+	\begin{itemize}
+		\item Авторами статьи \textit{Karegowda et al.}\footnote{\textit{Asha Gowda Karegowda et al. <<Exudates Detection in Retinal Images using Back Propagation Neural Network>>}} с помощью того же алгоритма и нейронной сети в качестве алгоритма классификации был получен следующий результат на использованной ими выборке: чувствительность --- 96.97\%, специфичность --- 100\%. 
+		\item Результат не удалось воспроизвести из-за отсутствия выборки с правильной сегментацией экссудатов.
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{Сегментация геморрагий}
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Сегментация геморрагий}
+	
+	Для сегментации геморрагий применяется специальный оператор Moat, предложенный в работе \textit{C. Sinthanayothin et al.}\footnote{\textit{C. Sinthanayothin et al. <<Automated detection of diabetic retinopathy on digital fundus images>>}}
+	\begin{columns}[c]
+		\column{.3\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=1.1\linewidth]{pics/exudates_1a}
+			%\caption{}
+			\label{fig:exudates_1a}
+		\end{figure}
+		
+		\column{.3\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=1.1\linewidth]{pics/exudates_1b}
+			%\caption{}
+			\label{fig:exudates_1b}
+		\end{figure}
+		
+		\column{.3\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=1.1\linewidth]{pics/exudates_1c}
+			%\caption{}
+			\label{fig:exudates_1c}
+		\end{figure}
+		
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Сегментация геморрагий. Moat operator}
+	{\footnotesize Идея фильтра Moat operator состоит в том, чтобы убрать из изображения «медленные» изменения цвета.
+	\newline
+	$g(x, y)$ --- исходное изображение размера $N$ x $M$.}
+	\scriptsize
+	\begin{enumerate}
+		\item Двумерное преобразование Фурье (дискретное): \begin{equation}
+		\begin{split}
+		&G(u, v) = \frac{1}{N} \sum\limits_{x=0}^{N - 1} \sum\limits_{y=0}^{M - 1} g(x, y) \exp\left[  -2\pi i \left( \frac{ux + vy}{N} \right) \right], \\ \nonumber
+		&u =\overline{0, N - 1},\, v = \overline{0, M - 1}
+		\end{split}
+		\end{equation}
+		
+		\item К изображению $G(u, v)$ применяется гауссовский фильтр высоких частот с параметром $\sigma$:
+		\begin{equation}
+		\begin{split}
+		&H(u, v) = 1 - \exp\left( -\frac{u^2 + v^2}{2\sigma^2} \right), \\ \nonumber
+		&I(u, v) = H(u, v) \cdot G(u, v), \\
+		&u =\overline{0, N - 1}, \,v = \overline{0, M - 1}
+		\end{split}
+		\end{equation}
+		
+	\end{enumerate}
+	\normalsize
+	
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Сегментация геморрагий. Moat operator}
+	
+	\scriptsize
+	\begin{enumerate}
+		\setcounter{enumi}{2}
+		\item Изображение $I(u, v)$ переводится обратно из частотного пространства в координатное пространство:
+		\begin{equation}
+		\begin{split}
+		&i(x, y) = \sum\limits_{u=0}^{N - 1} \sum\limits_{v=0}^{M - 1} I(u, v) \exp\left[  2\pi i \left( \frac{ux + vy}{N} \right) \right], \\ \nonumber
+		&x =\overline{0, N - 1},\, y = \overline{0, M - 1}
+		\end{split}
+		\end{equation}
+		\item Moat Operator от исходного изображения $g(x, y)$ определяется следующим образом:
+		\begin{equation}
+		\begin{split}
+		&g_{moat}(x, y) = g(x, y) - |i(x, y)|, \\ \nonumber
+		&x =\overline{0, N - 1},\, y = \overline{0, M - 1}
+		\end{split}
+		\end{equation}
+	\end{enumerate}
+	\vspace*{-0.7cm}
+	\begin{columns}
+		\column{.4\textwidth}
+		\begin{figure}[t]
+		\centering
+		\includegraphics[width=0.8\linewidth]{pics/image005a}
+		%\caption{}
+		\label{fig:image005a}
+		\end{figure}
+		
+		\column{.4\textwidth}
+		\begin{figure}[t]
+		\centering
+		\includegraphics[width=0.8\linewidth]{pics/moat}
+		%\caption{}
+		\label{fig:moat}
+		\end{figure}
+	\end{columns}
+	\normalsize
+	
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Сегментация геморрагий}
+	\vspace*{-0.55cm}
+	\begin{columns}[c]
+		\column{.65\textwidth}
+		
+		\begin{enumerate}
+			\footnotesize
+			\setcounter{enumi}{0}
+			\item Moat operator, усиление контраста
+			\begin{itemize}
+				\item Moat operator от исходного изображения
+				\vspace{1.5cm}
+				\item CLAHE + Медианная фильтрация
+				\vspace{1.5cm}
+				\item Бинаризация (порог выбирается автоматически по методу Otsu)
+				\normalsize
+			\end{itemize}
+		\end{enumerate}
+		\column{.35\textwidth}
+			\begin{figure}
+			\centering
+			\includegraphics[width=0.9\linewidth]{pics/hemorrhages/1}
+			%\caption{}
+			\label{fig:1}
+			\end{figure}
+			\vspace*{-1.75cm}
+			\begin{figure}
+			\centering
+			\includegraphics[width=0.9\linewidth]{pics/hemorrhages/2}
+			%\caption{}
+			\label{fig:2}
+			\end{figure}
+			\vspace*{-1.75cm}
+			\begin{figure}
+			\centering
+			\includegraphics[width=0.9\linewidth]{pics/hemorrhages/3}
+			%\caption{}
+			\label{fig:3}
+			\end{figure}
+		
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Сегментация геморрагий}
+	
+	\begin{columns}[c]
+		\column{.65\textwidth}
+		
+		\begin{enumerate}
+			\footnotesize
+			\setcounter{enumi}{1}
+			\item Удаление сосудов и лишних компонент
+			\begin{itemize}
+				\item На бинарном изображении удаляются кровеносные сосуды по описанной ранее процедуре.
+				\vspace{2cm}
+				\item Удаляются связные компоненты, площадь и эксцентриситет которых не находятся в определённом диапазоне.
+				\normalsize
+			\end{itemize}
+		\end{enumerate}
+		\column{.35\textwidth}
+			\begin{figure}
+			\centering
+			\includegraphics[width=0.9\linewidth]{pics/hemorrhages/4}
+			%\caption{}
+			\label{fig:4}
+			\end{figure}
+			\vspace*{-0.8cm}
+			\begin{figure}
+			\centering
+			\includegraphics[width=0.9\linewidth]{pics/hemorrhages/final}
+			%\caption{}
+			\label{fig:final}
+\end{figure}
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Сегментация геморрагий}
+	
+	\begin{itemize}
+		\item В работе Sinthanayothin et al. при использовании Moat Operator и сегментации с помощью алгоритма типа Region growing были получены следующие результаты: на использованной авторами выборке из 14 снимков чувствительность составила 77.5\%, специфичность --- 88.7\%.
+		\item Результат не удалось воспроизвести из-за отсутствия выборки с правильной сегментацией геморрагий.
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Список литературы}
+	\scriptsize{
+%\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
+%\bibitem[zheng]{p1} Zheng Y, He M, Congdon N.
+%\newblock <<The worldwide epidemic of diabetic retinopathy>>
+%\newblock Indian Journal of Ophthalmology (2012)
+
+%\end{thebibliography}
+%}
+
+	\begin{itemize}
+		\item Zheng Y, He M, Congdon N. “The worldwide epidemic of diabetic retinopathy”. Indian Journal of Ophthalmology (2012).
+		\item Т.М. Миленькая и др. “Диабетическая ретинопатия”. Сахарный диабет, 3 (2005).
+		\item F. Oloumi, R.M. Rangayyan и A.L. Ells. Digital Image Processing for Ophthalmology: Detection and Modeling of Retinal Vascular Architecture. Synthesis Lectures on
+		Biomedical Engineering. Morgan \& Claypool Publishers, 2014.
+		\item Richard Szeliski. Computer Vision: Algorithms and Applications. 2010
+		\item Huiqi Li и O. Chutatape. “Automated feature extraction in color retinal images by	a model based approach”. IEEE Transactions on Biomedical Engineering 51.2
+		(февр. 2004), с. 246—254.
+		\item A.A. Chernomorets et al. “Automated processing of retinal images”. 21-th	International Conference on Computer Graphics GraphiCon (2011), с. 78—81.
+		\item Chenyang Xu и J. L. Prince. “Gradient vector flow: a new external force for snakes”. Computer Vision and Pattern Recognition, 1997.
+		\item Q. Li et al. “A Multiscale Approach to Retinal Vessel Segmentation Using Gabor Filters and Scale Multiplication”. 2006 IEEE International Conference on Systems, Man and Cybernetics. Т. 4. Окт. 2006, с. 3521—3527. 
+		\item Ryszard S. Choras. “Ocular Biometrics: Automatic Feature Extraction from	Eye Images”. Proceedings of WSEAS International Conference on Signal Processing. TELE-20INFO’11/MINO’11/SIP’11. Canary Islands, Spain, 2011, с. 179—183.
+\end{itemize}}
+\end{frame}
+
+\begin{frame}
+\frametitle{Список литературы}
+	\scriptsize{
+	\begin{itemize}
+		\item Asha Gowda Karegowda et al. “Exudates Detection in Retinal Images using Back Propagation Neural Network”. International Journal of Computer Applications 25.3 (июль 2011), с. 25—31.
+		\item C. Sinthanayothin et al. “Automated detection of diabetic retinopathy on digital fundus images”. Diabetic Medicine 19 (2 2002), с. 105—112.
+		\item Jyothis Jose и Jinsa Kuruvilla. “Detection of Red Lesions and Hard Exudates in Color Fundus Images”. International Journal of Engineering and Computer Science 3 (10 окт. 2014), с. 8583—8588.
+		\item Otsu N. “A Threshold Selection Method from Gray-Level Histograms”. IEEE Transactions on Systems, Man, and Cybernetics 9.1 (янв. 1979), с. 62—66.
+		\item Yang Mingqiang, Kpalma Kidiyo и Ronsin Joseph. “A Survey of Shape Feature Extraction Techniques”. Pattern Recognition Techniques, Technology and Applications (2008).
+		\item T. Kauppi et al. “DIARETDB1 diabetic retinopathy database and evaluation protocol”. Proceedings of 11th Conf. on Medical Image Understanding and Analysis. Aberystwyth, Wales, 2007.
+	\end{itemize}}
+\end{frame}
+%----------------------------------------------------------------------------------------
+
+\end{document} 
